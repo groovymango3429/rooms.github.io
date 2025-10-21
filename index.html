@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clemson Room Assignment</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Clemson Room Assignment</h1>
+        <form id="ranking-form">
+            <label for="friend-select">Select Friend:</label>
+            <select id="friend-select">
+                <option value="Friend 1">Friend 1</option>
+                <option value="Friend 2">Friend 2</option>
+                <option value="Friend 3">Friend 3</option>
+                <option value="Friend 4">Friend 4</option>
+                <option value="Friend 5">Friend 5</option>
+                <option value="Friend 6">Friend 6</option>
+                <option value="Friend 7">Friend 7</option>
+            </select>
+            <div class="ranking-inputs">
+                <label for="ranking-1">Rank Friend 1:</label>
+                <input type="number" id="ranking-1" min="1" max="7">
+                <!-- Repeat for Friends 2-7 -->
+            </div>
+            <button type="submit">Submit Ranking</button>
+        </form>
+        <div id="submission-status">
+            <p>Friend Rankings Submitted: <span id="submitted-count">0</span>/8</p>
+        </div>
+        <div id="results">
+            <h2>Results</h2>
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
