@@ -8,31 +8,54 @@
 </head>
 <body>
     <div class="container">
-        <h1>Clemson Room Assignment</h1>
-        <form id="ranking-form">
-            <label for="friend-select">Select Friend:</label>
-            <select id="friend-select">
-                <option value="Friend 1">Friend 1</option>
-                <option value="Friend 2">Friend 2</option>
-                <option value="Friend 3">Friend 3</option>
-                <option value="Friend 4">Friend 4</option>
-                <option value="Friend 5">Friend 5</option>
-                <option value="Friend 6">Friend 6</option>
-                <option value="Friend 7">Friend 7</option>
-            </select>
-            <div class="ranking-inputs">
-                <label for="ranking-1">Rank Friend 1:</label>
-                <input type="number" id="ranking-1" min="1" max="7">
-                <!-- Repeat for Friends 2-7 -->
-            </div>
-            <button type="submit">Submit Ranking</button>
-        </form>
-        <div id="submission-status">
-            <p>Friend Rankings Submitted: <span id="submitted-count">0</span>/8</p>
+        <h1>🐅 Clemson Room Assignment</h1>
+        <p class="subtitle">Rank your friends to find the perfect room groups!</p>
+        
+        <div id="submission-status" class="status-box">
+            <h3>Submission Status</h3>
+            <p><span id="submitted-count">0</span> / 8 friends have submitted</p>
+            <div id="submitted-names"></div>
         </div>
-        <div id="results">
-            <h2>Results</h2>
-            <!-- Results will be displayed here -->
+
+        <div id="form-container">
+            <form id="ranking-form">
+                <div class="form-group">
+                    <label for="friend-select">Who are you?</label>
+                    <select id="friend-select" required>
+                        <option value="">-- Select Your Name --</option>
+                        <option value="Austin">Austin</option>
+                        <option value="Luke">Luke</option>
+                        <option value="Ian">Ian</option>
+                        <option value="Jackson">Jackson</option>
+                        <option value="Jack">Jack</option>
+                        <option value="Jacob">Jacob</option>
+                        <option value="Patrick">Patrick</option>
+                        <option value="Elijah">Elijah</option>
+                    </select>
+                </div>
+
+                <h3>Rank your friends (1 = Most Preferred, 7 = Least Preferred)</h3>
+                <div id="ranking-inputs">
+                    <!-- Dynamically generated ranking inputs will go here -->
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Rankings</button>
+            </form>
+        </div>
+
+        <div id="results" style="display: none;">
+            <h2>🎉 Room Assignments</h2>
+            <div class="rooms-container">
+                <div class="room">
+                    <h3>Room 1</h3>
+                    <ul id="room1-list"></ul>
+                </div>
+                <div class="room">
+                    <h3>Room 2</h3>
+                    <ul id="room2-list"></ul>
+                </div>
+            </div>
+            <button id="reset-btn" class="reset-btn">Reset All Submissions</button>
         </div>
     </div>
     <script src="app.js"></script>
