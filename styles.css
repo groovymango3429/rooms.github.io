@@ -1,0 +1,70 @@
+/** Clemson-themed Styling */
+body {
+    background-color: #FF8C00; /* Clemson Orange */
+    color: #5E1F6D; /* Clemson Purple */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #5E1F6D; /* Clemson Purple */
+}
+
+form {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="submit"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #5E1F6D; /* Clemson Purple */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #5E1F6D; /* Clemson Purple */
+    color: #FFF;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF8C00; /* Clemson Orange */
+    color: #5E1F6D; /* Clemson Purple */
+}
+
+.status {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #5E1F6D; /* Clemson Purple */
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #DFF0D8; /* Light green */
+    color: #3C763D; /* Dark green */
+}
+
+.error {
+    background-color: #F2DEDE; /* Light red */
+    color: #A94442; /* Dark red */
+}
+
+.results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #5E1F6D; /* Clemson Purple */
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    form {
+        padding: 10px;
+    }
+}
